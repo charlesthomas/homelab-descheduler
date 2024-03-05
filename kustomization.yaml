@@ -1,0 +1,19 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: descheduler
+
+commonAnnotations:
+  repo: https://github.com/charlesthomas/homelab-descheduler
+commonLabels:
+  app.kubernetes.io/instance: descheduler
+  app.kubernetes.io/name: descheduler
+
+resources:
+- resources/namespaces.yaml
+helmCharts:
+- name: descheduler
+  namespace: descheduler
+  releaseName: descheduler
+  repo: https://kubernetes-sigs.github.io/descheduler/
+  valuesFile: helm/values.yaml

@@ -1,0 +1,24 @@
+_commit: v1.6.12
+_src_path: /home/crthomas/code/charlesthomas/homelab-template
+additionalResources: ''
+backups: false
+helm: true
+helmCrds: false
+helmName: descheduler
+helmRelease: descheduler
+helmRepo: https://kubernetes-sigs.github.io/descheduler/
+helmValues: helm/values.yaml
+helmVersion: ''
+ingress: false
+labels: |-
+  app.kubernetes.io/instance: descheduler
+  app.kubernetes.io/name: descheduler
+name: descheduler
+namespace: descheduler
+pvc: false
+reloader: false
+resources: []
+service: false
+serviceAccount: false
+upstreamURL: https://github.com/kubernetes-sigs/descheduler
+url: https://github.com/charlesthomas/homelab-descheduler
