@@ -1,4 +1,4 @@
-_commit: v1.6.12
+_commit: v1.8.1
 _src_path: /home/crthomas/code/charlesthomas/homelab-template
 additionalResources: ''
 backups: false
@@ -9,6 +9,9 @@ helmRelease: descheduler
 helmRepo: https://kubernetes-sigs.github.io/descheduler/
 helmValues: helm/values.yaml
 helmVersion: ''
+homepageEnabled: true
+ingHost: descheduler.crt.house
+ingName: descheduler
 ingress: false
 labels: |-
   app.kubernetes.io/instance: descheduler

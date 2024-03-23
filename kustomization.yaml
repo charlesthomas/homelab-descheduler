@@ -11,6 +11,23 @@ commonLabels:
 
 resources:
 - resources/namespaces.yaml
+patches:
+- patch: |-
+    apiVersion: networking.k8s.io/v1
+    kind: Ingress
+    metadata:
+      name: descheduler
+      namespace: descheduler
+      annotations:
+        gethomepage.dev/href: https://descheduler.crt.house
+        gethomepage.dev/enabled: "true"
+        gethomepage.dev/description: 
+        gethomepage.dev/group: 
+        gethomepage.dev/icon: descheduler
+        gethomepage.dev/name: descheduler
+        gethomepage.dev/pod-selector: ""
+  target:
+    kind: Ingress
 helmCharts:
 - name: descheduler
   namespace: descheduler
